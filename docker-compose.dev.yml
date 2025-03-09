@@ -6,8 +6,6 @@ services:
     build: .
     ports:
       - "8000:8000"
-    environment:
-      - ENV=development
     env_file:
       - .env
     volumes:
