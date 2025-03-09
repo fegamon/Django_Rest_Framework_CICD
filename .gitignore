@@ -1,7 +1,19 @@
-.venv
+# Environment variables
 .env
 .env.dev
 
+# Virtual environments
+.venv
+
+# Python cache
 __pycache__
 
+# Database
 db.sqlite3
+
+# Logs
+logs
+
+# Static files
+staticfiles
+static
