@@ -10,6 +10,8 @@ services:
       - .env
     volumes:
       - .:/app  # Allows changes in real time
+    depends_on:
+      - db
 
   db:
     container_name: Postgres
