@@ -55,4 +55,6 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           POSTGRES_HOST: "postgres"
           POSTGRES_PORT: "5432"
-        run: python ./To_Do/manage.py test
+        run: |
+          cd ./To_Do
+          python manage.py test
