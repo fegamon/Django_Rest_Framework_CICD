@@ -27,6 +27,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check PostgreSQL environment variables
+        run: |
+          docker exec $(docker ps -q --filter ancestor=postgres) env
+
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
