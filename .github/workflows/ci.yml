@@ -27,20 +27,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check PostgreSQL environment variables
-        run: |
-          docker exec $(docker ps -q --filter ancestor=postgres) env
-
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-
-      - name: Debug environment variables
-        run: |
-          env | grep POSTGRES_
-          env | grep DJANGO_
 
       - name: Install dependencies
         run: |
@@ -63,7 +53,7 @@ jobs:
           POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
           POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          POSTGRES_HOST: "postgres"
+          POSTGRES_HOST: "localhost"
           POSTGRES_PORT: "5432"
         run: |
           cd ./To_Do
