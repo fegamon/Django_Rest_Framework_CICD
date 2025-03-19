@@ -32,6 +32,11 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Debug environment variables
+        run: |
+          env | grep POSTGRES_
+          env | grep DJANGO_
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
