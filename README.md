@@ -22,7 +22,7 @@ DJANGO_DEBUG=True
 DJANGO_SECRET=django-insecure-key
 DJANGO_ALLOWED_HOSTS=localhost
 
-POSTGRES_DB=my__database
+POSTGRES_DB=my_database
 POSTGRES_USER=my_user
 POSTGRES_PASSWORD=my_password
 POSTGRES_HOST=db
